@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Shield, Activity, Radio, Cpu, Bell, CheckCircle2, AlertTriangle, HelpCircle } from 'lucide-react';
+import { Shield, Activity, Radio, Cpu, Bell, CheckCircle2, AlertTriangle, HelpCircle, FileDown } from 'lucide-react';
 import { SystemMetrics, PolicyConfig } from '../types/cyber';
 
 interface HeaderProps {
@@ -92,6 +92,15 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="text-cyan-400">SOC CLOCK:</span>
             <span className="text-slate-200">{currentTime || '12:00:00'} UTC</span>
           </div>
+          <a
+            href="/CYBERSENTINEL_AI_Project_Report.pdf"
+            download="CYBERSENTINEL_AI_Project_Report.pdf"
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 text-cyan-300 hover:text-white text-[11px] font-mono transition-colors"
+            title="Download Comprehensive Technical Project Report (PDF)"
+          >
+            <FileDown className="w-3 h-3 text-cyan-400" />
+            <span>PDF Report</span>
+          </a>
           <button
             onClick={onOpenDemoGuide}
             className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-cyan-500/40 text-cyan-300 hover:text-white text-[11px] font-mono transition-colors"
